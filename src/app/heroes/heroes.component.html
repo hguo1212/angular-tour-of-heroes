@@ -2,6 +2,7 @@
 <h2>My heroes</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
+    <!-- 测试重写commit msg -->
     <!-- 条件渲染样式 [class.some-css-class]="some-condition" -->
     <button type="button" (click)="onSelect(hero)" [class.selected]="hero===selectedHero">
       <span class="badge">{{hero.id}}</span>
