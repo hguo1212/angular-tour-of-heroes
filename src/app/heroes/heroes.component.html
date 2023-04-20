@@ -4,11 +4,11 @@
   <li *ngFor="let hero of heroes">
     <!-- 测试重写commit msg -->
     <!-- 条件渲染样式 [class.some-css-class]="some-condition" -->
-    <button type="button" (click)="onSelect(hero)" [class.selected]="hero===selectedHero">
-      <span class="badge">{{hero.id}}</span>
-      <span class="name">{{hero.name}}</span>
-    </button>
+    <!-- <button type="button" (click)="onSelect(hero)" [class.selected]="hero===selectedHero"> -->
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+    <button type="button" class="delete" title="delete hero"
+  (click)="delete(hero)">x</button>
   </li>
 </ul>
-
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
